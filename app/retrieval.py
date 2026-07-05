@@ -24,6 +24,19 @@ _TOKEN_RE = re.compile(r"[a-z0-9+#.]+")
 
 # A handful of domain synonyms so that JD language maps onto SHL's product
 # vocabulary. Extend this as you observe retrieval misses in eval.
+#
+# The leadership/executive/director/cxo entries below exist because of a real
+# miss found during evaluation: a "senior leadership, CXO, 15+ years, selection
+# against a benchmark" query scored "Enterprise Leadership Report 1.0/2.0" far
+# above "Occupational Personality Questionnaire OPQ32r" and its Leadership/UCF
+# report pairing, purely because the Enterprise Leadership Report's name and
+# description repeat the literal word "leadership" while OPQ32r's description
+# talks about "workplace behavioural style" and never uses that word at all.
+# Lexical retrieval has no notion that OPQ32r is SHL's standard instrument for
+# almost every senior/selection scenario unless that's spelled out somewhere in
+# the corpus, so we spell it out here rather than in the LLM prompt, since a
+# prompt only helps once an item is already in the candidate pool, whereas the
+# retrieval score decides whether it gets into the pool at all.
 SYNONYMS = {
     "js": "javascript",
     "reactjs": "react",
@@ -36,7 +49,11 @@ SYNONYMS = {
     "personality": "personality behavior opq",
     "cognitive": "ability aptitude reasoning verify",
     "sjt": "situational judgment biodata scenarios",
-    "leadership": "leadership opq universal competency",
+    "leadership": "leadership opq occupational personality questionnaire competency",
+    "executive": "executive opq occupational personality questionnaire leadership",
+    "director": "director opq occupational personality questionnaire leadership",
+    "cxo": "executive director opq occupational personality questionnaire",
+    "benchmark": "benchmark competency norm opq",
 }
 
 
