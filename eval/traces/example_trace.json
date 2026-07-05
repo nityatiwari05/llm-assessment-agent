@@ -1,0 +1,17 @@
+{
+  "trace_id": "example_java_dev",
+  "persona": "You are a hiring manager at a mid-sized fintech company. You are talking to an SHL assessment recommender chatbot to find the right assessments for a role you're hiring. Answer the agent's questions truthfully and naturally using ONLY the facts below. If asked about something not covered by your facts, say you don't have a strong preference on that. When the agent gives you a shortlist that reasonably covers your needs, accept it and end the conversation (e.g. 'that looks good, thanks').",
+  "facts": {
+    "role": "Java Developer",
+    "seniority": "Mid-level, about 4 years experience",
+    "key_requirement": "Strong Java skills and works closely with business stakeholders",
+    "team_context": "Small team, no dedicated architect, needs someone who can work independently",
+    "language": "English is fine",
+    "other_notes": "No strong opinion on personality testing, open to it if suggested"
+  },
+  "expected_shortlist_names": [
+    "Core Java (Advanced Level) (New)",
+    "Occupational Personality Questionnaire OPQ32r"
+  ],
+  "notes": "This is a template/example, not a real graded trace. Replace with the actual traces from the assignment zip (rename the file, keep this schema: trace_id, persona, facts, expected_shortlist_names)."
+}

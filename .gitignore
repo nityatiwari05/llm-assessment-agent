@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+eval/traces/*.json
+!eval/traces/example_trace.json
+eval/last_run_results.json
+.pytest_cache/
+*.egg-info/
+eval/traces/*.md
