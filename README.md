@@ -17,7 +17,7 @@ shl-agent/
     schemas.py            Pydantic request/response models (matches the spec exactly)
     config.py               env-based configuration
   data/
-    catalog.json     <-- YOU ADD THIS (see below) — not committed, it's your input data
+    catalog.json     <-- YOU ADD THIS 
   eval/
     load_md_traces.py            parses markdown-style dev traces -> JSON
     run_scripted_replay.py       replays real user turns, checks hard-eval constraints
