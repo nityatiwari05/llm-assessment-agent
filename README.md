@@ -149,7 +149,7 @@ docker build -t shl-agent .
 docker run -p 8000:8000 -e ANTHROPIC_API_KEY=sk-... shl-agent
 ```
 
-## Design notes (see APPROACH.md for the submission write-up)
+## Design notes
 
 - **Retrieval is BM25, not embeddings.** Assessment names are short, precise
   skill/product tokens ("Core Java", "OPQ32r", "SVAR") — a keyword-heavy domain
